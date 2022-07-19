@@ -47,7 +47,7 @@ def non_negative_int(num: int) -> int:
     num = int(num)
     if num < 0:
         print("Incorrect parameters")
-        return None
+        return None  # type: ignore
     return num
 
 
@@ -167,8 +167,6 @@ def differ_payment() -> None:
         return
 
     sum_payments: int = 0
-    overpayment: int = 0
-    principal: int = 0
     interest_rate: float = (args.interest / 100) / INTEREST_SETTING
 
     if args.type == "diff":  # calculate differentiated payments
