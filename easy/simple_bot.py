@@ -1,6 +1,10 @@
 """
-Simple Chatty Bot Project (JetBrains Academy)
-For details, check out:
+Simple Chatty Bot Project (from JetBrains Academy):
+Project for beginners (Python syntax basics.) Very simple
+program using conditionals, loops, and functions.
+Easy ~ 2 hours to complete
+
+For more details, check out:
 https://hyperskill.org/projects/97
 """
 

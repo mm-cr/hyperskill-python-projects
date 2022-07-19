@@ -1,8 +1,13 @@
 """
-Loan Calculator Project (JetBrains Academy)
-For details, check out:
+Loan Calculator Project (from JetBrains Academy):
+Project to practice math (financial operations) in Python. It uses third-party modules and libraries.
+It helps to practice using the argparse module to make easy-to-write and user-friendly command-line interfaces.
+Medium ~ 11 hours to complete
+
+For more details, check out:
 https://hyperskill.org/projects/90
 """
+
 import argparse
 import sys
 from math import ceil, floor, log, pow
