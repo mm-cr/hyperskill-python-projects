@@ -1,2 +1,2 @@
 # hyperskill-projects
-Solutions for Hyperskill projects (JetBrains Academy)
+Hyperskill projects (JetBrains Academy)
