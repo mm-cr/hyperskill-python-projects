@@ -47,7 +47,7 @@ def non_negative_int(num: int) -> int:
     num = int(num)
     if num < 0:
         print("Incorrect parameters")
-        return
+        return None
     return num
 
 
@@ -147,8 +147,8 @@ def differ_payment() -> None:
                         choices=["annuity", "diff"],
                         help="You need to choose only one type from the list.")
     parser.add_argument("--payment",
-                       type=non_negative_int,  # type: ignore
-                       help="You need to input the monthly payment amount.")
+                        type=non_negative_int,  # type: ignore
+                        help="You need to input the monthly payment amount.")
     parser.add_argument("--principal",
                         type=non_negative_int,  # type: ignore
                         help="You need to input the principal amount.")
@@ -182,14 +182,14 @@ def differ_payment() -> None:
         print(f"\nOverpayment = {overpayment}")
 
     else:  # calculate the annuity payment
-        if args.payment is None: #  If we have the principal amount but not the payment amount
+        if args.payment is None:  # If we have the principal amount but not the payment amount
             power_op = pow((1 + interest_rate), args.periods)
             payment = ceil(args.principal * ((interest_rate * power_op) / (power_op - 1)))
             print(f"Your annuity payment = {payment}!")
             overpayment = (payment * args.periods) - args.principal
             print(f"Overpayment = {overpayment}")
 
-        elif args.principal is None: #  if we have the payment amount
+        elif args.principal is None:  # if we have the payment amount
             power_op = pow((1 + interest_rate), args.periods)
             principal = floor(args.payment / ((interest_rate * power_op) / (power_op - 1)))
             overpayment = (args.payment * args.periods) - principal
@@ -206,5 +206,5 @@ def differ_payment() -> None:
 
 
 if __name__ == '__main__':
-    #  main() #  User input mode
-    differ_payment()  # argparse mode
+    main()  # User input mode
+    # differ_payment()  # argparse mode
