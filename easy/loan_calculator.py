@@ -169,7 +169,7 @@ def differ_payment() -> None:
 
     if len(sys.argv) < MIN_NUM_EXPECTED_ARGS or args.interest is None:
         print("Incorrect parameters")
-        return
+        sys.exit()
 
     sum_payments: int = 0
     interest_rate: float = (args.interest / 100) / INTEREST_SETTING
